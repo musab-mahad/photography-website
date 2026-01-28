@@ -10,16 +10,19 @@ header {
   text-align: center;
 }
 
-img {
-  width: 400px;
-  height: 260px;
-  border: 1px solid #bbb8b8;
-}
-
 ul {
   list-style: none;
+  padding: 0;
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
+  gap: 16px;
+}
+
+ul li img {
+  width: 400px; /* ✅ responsive width */
+  max-width: 300px; /* limits size on large screens */
+  height: 260px; /* keeps aspect ratio */
+  border-radius: 8px;
 }
 
 section {
@@ -27,8 +30,9 @@ section {
 }
 
 .my-photo {
-  width: 200px;
-  height: 210px;
+  width: 300px;
+  height: 260px;
+  border-radius: 8px;
 }
 
 button:hover {
